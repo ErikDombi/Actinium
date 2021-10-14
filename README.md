@@ -5,12 +5,12 @@ A small library for interacting with various electronics with a Raspberry Pi Pic
 
 ### Printing Hello World
 ```cpp
-#include "pico/stdlib.h
+#include "pico/stdlib.h"
 #include "LCH.h"
 
 int main() {
 	// Constructor accepts the number of the 11 pins which are connected to the LCD
-    // In order: RS, RW, E, D0, D1, D2, D3, D4, D5, D6, D7
+    	// In order: RS, RW, E, D0, D1, D2, D3, D4, D5, D6, D7
 	Actinium::LCD display(5, 6, 7, 15, 14, 13, 12, 11, 10, 9, 8);
 	
 	// By default, the LCD starts in multiline mode, with a font size of 5x8 pixels,
