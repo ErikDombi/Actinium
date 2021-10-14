@@ -25,7 +25,7 @@ namespace Actinium {
         TWO
     };
 
-    enum CharSize {
+    enum FontSize {
         FiveByEight,
         FiveByEleven
     };
@@ -77,7 +77,7 @@ namespace Actinium {
         void WriteString(std::string input, unsigned int sleep = 2);
         void Apply();
         void EntryMode(ShiftDirection Shift, bool ShiftDisplay);
-        void FunctionSet(LineCount NumLines, CharSize dispSize);
+        void FunctionSet(LineCount NumLines, FontSize dispSize);
         void On(bool cursor = true, bool cursorBlink = true);
         void Off();
     };

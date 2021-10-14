@@ -131,9 +131,9 @@ void LCD::EntryMode(ShiftDirection Shift, bool ShiftDisplay) {
     this->SetPins(0, 0, 0, 0, 0, 0, 0, 1, ShiftRight, ShiftDisplay);
 }
 
-void LCD::FunctionSet(LineCount NumLines, CharSize dispSize) {
+void LCD::FunctionSet(LineCount NumLines, FontSize dispSize) {
     BIT TwoLines = NumLines == LineCount::TWO;
-    BIT Size = dispSize == CharSize::FiveByEleven;
+    BIT Size = dispSize == FontSize::FiveByEleven;
     this->SetPins(0, 0, 0, 0, 1, 1, TwoLines, Size, 0, 0);
 }
 
@@ -169,6 +169,6 @@ LCD::LCD(BYTE RS,
     this->m_DB1_PIN = Pin(DB1, PinMode::OUT);
     this->m_DB0_PIN = Pin(DB0, PinMode::OUT);
     this->ClearDisplay();
-    this->FunctionSet(LineCount::TWO, CharSize::FiveByEight);
+    this->FunctionSet(LineCount::TWO, FontSize::FiveByEight);
     this->EntryMode(ShiftDirection::RIGHT, false);
 }
